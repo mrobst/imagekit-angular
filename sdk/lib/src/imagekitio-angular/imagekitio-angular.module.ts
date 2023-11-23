@@ -6,9 +6,9 @@ import { IkVideoComponent } from './ik-video/ik-video.component';
 import { ImageKitConfiguration, ImagekitService } from './imagekit.service';
 
 declare module "@angular/core" {
-  interface ModuleWithProviders {
-      ngModule: Type<any>;
-      providers?: (Provider)[] | undefined;
+  interface ModuleWithProviders<T> {
+    ngModule: Type<T>;
+    providers?: Array<Provider | EnvironmentProviders>;
   }
 }
 
