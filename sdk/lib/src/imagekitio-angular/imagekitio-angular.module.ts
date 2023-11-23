@@ -1,16 +1,9 @@
-import { ModuleWithProviders, NgModule, Provider, Type } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IkImageComponent } from './ik-image/ik-image.component';
 import { IkUploadComponent } from './ik-upload/ik-upload.component';
 import { IkVideoComponent } from './ik-video/ik-video.component';
 import { ImageKitConfiguration, ImagekitService } from './imagekit.service';
-
-declare module "@angular/core" {
-  interface ModuleWithProviders<T> {
-    ngModule: Type<T>;
-    providers?: Array<Provider | EnvironmentProviders>;
-  }
-}
 
 @NgModule({
   declarations: [IkUploadComponent, IkImageComponent, IkVideoComponent],
